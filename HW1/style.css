@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #a1a1a1;
+    background-color: #575757;
     color: #333;
     overflow-x: hidden;
     line-height: 1.6;
@@ -79,16 +79,20 @@ section {
 
 .parallax2 {
     background-image: url('Images/Background2.png');
-    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:auto;
+    background-size: cover;
     position: relative;
 }
 
 .parallax3 {
     background-image: url('Images/Background3.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 /*Content*/
