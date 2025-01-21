@@ -66,7 +66,7 @@ section {
     align-items: center;
 }
 
-/*Parallax Backgrounds*/
+/*Parallax*/
 .parallax {
     background-image: url('Images/Background1.png');
     height: 100%; 
