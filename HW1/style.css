@@ -1,0 +1,110 @@
+/*General*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a1a1a1;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/*Custom font*/
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Font/GentlemanRegular-2OV3l.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Hero Section*/
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('Images/Hero-Image.png') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+/*Header*/
+header {
+    font-family: 'CustomFont', serif;
+    background-color: #a1a1a1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 150px 20px; 
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Parallax Backgrounds*/
+.parallax {
+    background-image: url('Images/Background1.png');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax2 {
+    background-image: url('Images/Background2.png');
+}
+
+.parallax3 {
+    background-image: url('Images/Background3.png');
+}
+
+/*Content*/
+.content {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    max-width: 800px; 
+    text-align: center; 
+}
+
+/*Heading*/
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/*Paragraph*/
+p {
+    font-size: 1.1rem;
+    margin: 0;
+}
