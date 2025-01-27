@@ -1,0 +1,7 @@
+# Homework 2 Readme
+
+There was frightenly little difference in what I came up with and what ChatGPT came up with. It is a little scary to see how good it is at first, then I think about how it could be used to make coding faster. As the whole world spins faster out of control things move at speeds that make it hard to keep up with at times. It is pretty standard code and could be explained easily, I feel. I look at the code and see things that I would have to do to make it work for what I want. It's good but it isn't perfect for my specific needs. That being the case I would feel AI generated code would be mine. It is a tool, after all. Using photoshop and having is delete a bacground or highlight an object is similar in my eyes. Their tools made to make our work faster and easier so we can work more on pushing the boundries of our chosen craft. I've always felt AI isn't dangerous unless it's not handled responsibly. That seems to be the problem with many things in life. If we put it to nefarious ends we get nefarious outcomes. WE are the ones in control. As long as we keep that fact in sight, AI is no more dangerous that a cooking utensil.
+
+## Quote of the week
+
+**Remember** *"Artificial intelligence is no match for natural stupidity."*
