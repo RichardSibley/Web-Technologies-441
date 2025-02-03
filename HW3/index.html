@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Choose Your Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'AdventureHeader';
+            src: url('fonts/AdventureHeader.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'AdventureBody';
+            src: url('fonts/AdventureBody.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'AdventureParagraph';
+            src: url('fonts/AdventureParagraph.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'AdventureBody', sans-serif;
+        }
+        
+        h1 {
+            font-family: 'AdventureHeader', sans-serif;
+        }
+        
+        p {
+            font-family: 'AdventureParagraph', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Choose Your Own Adventure</h1>
+        <img id="story-image" src="Images/MainPageImage.png" alt="Crash Landed">
+        <p id="story">You are the intrepid explorer Avery Stone and you have crash landed in an unfamiliar land! You take a moment to get your bearings and notice that you have 3 places you can go that lead to civilization. You landed at the edge of a Darkened Forest that is seperated from Open Plains by a quick running river. You can cut through the Darkened Forest, Build a Raft to face the river, or ford the river to cross the Open Plains. Make a choice below!</p>
+        <div id="buttons">
+            <button onclick="choosePath('forest')">Cut through the Darkened Forest</button>
+            <button onclick="choosePath('plains')">Ford the River to the Open Plains</button>
+            <button onclick="choosePath('river')">Build a Raft and face the river</button>
+        </div>
+    </div> 
+    <script src="script.js"></script>     
+</body>
+</html>
