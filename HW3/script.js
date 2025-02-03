@@ -29,7 +29,7 @@ function choosePath(choice) {
         buttons.innerHTML = '<button onclick="choosePath(\'rapids\')">Brave the Rapids</button>' +
                            '<button onclick="choosePath(\'shore\')">Put to Shore</button>';
     } else if (choice === 'growling') {
-        storyText.innerHTML = "A ranger and his wolf companion meet you on the trail. They guide you to civilization! Congratulations! You Survived!";
+        storyText.innerHTML = "A ranger and their wolf companion meet you on the trail. They guide you to civilization! Congratulations! You Survived!";
         storyImage.src = "Images/growling.png";
         buttons.innerHTML = '<button onclick="location.reload()">Restart Adventure</button>';
     } else if (choice === 'tiger') {
