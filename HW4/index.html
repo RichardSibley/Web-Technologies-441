@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Own Adventure</h1>
+        <p><i>All images were created in Adobe Firely and Adobe Express</i></p>
+        <img id="story-image" src="Images/Gifs/AdventureAwaits.gif" alt="Adventure Scene">
+        <p id="story">Press the button below to start your journey!</p>
+        <div id="input-decision" style="display: none;">
+            <label id="decision-prompt" for="decision-input"></label>
+            <input id="decision-input" type="text" placeholder="Enter your decision">
+            <button onclick="submitDecision()">Submit</button>
+        </div>
+        <button id="start-button" onclick="startAdventure()">Start</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
