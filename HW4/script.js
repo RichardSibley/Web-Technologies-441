@@ -54,12 +54,11 @@ const storyChoices = {
 };
 
 function startAdventure() {
-    // Begin the story at the 'start' prompt
     loadStory("start");
 }
 
 function restartAdventure() {
-    location.reload(); // Reload the page to reset the story
+    location.reload(); 
 }
 
 function loadStory(choice) {
@@ -72,20 +71,18 @@ function loadStory(choice) {
         return;
     }
 
-    // Update the DOM with the current story and image
     document.getElementById("story").textContent = story.prompt;
     document.getElementById("story-image").src = story.image;
 
-    // Show or hide the input based on whether there are options
     if (story.options.length > 0) {
         document.getElementById("input-decision").style.display = "block";
         document.getElementById("decision-prompt").textContent = "Your decision:";
-        document.getElementById("decision-input").value = ""; // Clear input
-        document.getElementById("start-button").textContent = "Restart Your Journey"; // Update button text
+        document.getElementById("decision-input").value = ""; 
+        document.getElementById("start-button").textContent = "Restart Your Journey"; 
     } else {
         document.getElementById("input-decision").style.display = "none";
-        document.getElementById("decision-prompt").textContent = ""; // Hide prompt
-        document.getElementById("start-button").textContent = "Restart Your Journey"; // Update button text
+        document.getElementById("decision-prompt").textContent = ""; 
+        document.getElementById("start-button").textContent = "Restart Your Journey"; 
     }
 }
 
@@ -93,15 +90,12 @@ function submitDecision() {
     let decision = document.getElementById("decision-input").value.toLowerCase();
     const validOptions = storyChoices[currentPrompt].options;
 
-    // While loop to ensure the user enters a valid choice
     while (!validOptions.includes(decision)) {
         alert(`Invalid choice! Please choose one of the following: ${validOptions.join(", ")}`);
         console.log("Invalid input received: " + decision);
 
-        // Prompt the user again (for demonstration purposes)
         decision = prompt(`Enter your choice (${validOptions.join(", ")}):`).toLowerCase();
 
-        // Break out of the loop if the prompt is canceled or empty
         if (!decision) {
             alert("No decision entered. Restarting...");
             location.reload();
