@@ -44,8 +44,8 @@ C. No changes to startAdventure:
 
 3. Provided tips for making the game responsive and visually appealing across different devices.
 
-I struggle with coding in general. I have found that being able to bounce things off of ChatGPT in regards to coding and partnering it with W3 Schools and stack exchange has been an aggresively functional set of tools to help me understand beyond the lectures and how to integrate things in my code. It allowed me to build and change what I alread had and helped smooth things out with explanations when I couldn't understand why things werent working.
+I struggle with coding in general. I have found that being able to bounce things off of ChatGPT in regards to coding and partnering it with W3 Schools and stack exchange has been an aggresively functional set of tools to help me understand beyond the lectures and how to integrate things in my code. It allowed me to build and change what I already had and helped smooth things out with explanations when I couldn't understand why things werent working.
 
 ## Quote of the Week
 
-**Remember** *“The computer allows us to make more mistakes faster than any other invention in human history, with the possible exceptions of handguns and tequila…”*
+**Hot Tip!** *“Did you know your computer’s cupholder can also be used to play DVDs?”*
