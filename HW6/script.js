@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const storedData = localStorage.getItem("playerData");
     let playerData = storedData ? JSON.parse(storedData) : null;
   
-    // Handle player info form submission
     const playerForm = document.getElementById("playerForm");
     if (playerForm) {
       playerForm.addEventListener("submit", (event) => {
@@ -23,18 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "game.html";
       });
     }
-  
-    // Display player name and attempts on game.html
+    
     if (playerData && document.getElementById("welcomeMessage")) {
       document.getElementById("welcomeMessage").textContent = 
         `Welcome, ${playerData.firstName}! Ready to play?`;
       document.getElementById("attempts").textContent = playerData.attempts;
     }
   
-    // Array of local images
     const images = ["Image1.png", "Image2.png", "Image3.png", "Image4.png", "Image5.png", "Image6.png"];
-    let gameImages = [...images, ...images]; // Duplicate images for pairs
-    gameImages.sort(() => Math.random() - 0.5); // Shuffle images
+    let gameImages = [...images, ...images]; 
+    gameImages.sort(() => Math.random() - 0.5); 
   
     let firstCard = null;
     let secondCard = null;
@@ -50,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
         card.dataset.image = img;
         card.dataset.index = index;
         
-        // Create image element
         const imgElement = document.createElement("img");
         imgElement.src = `./Images/${img}`;
         imgElement.alt = "Game Image";
@@ -75,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       secondCard = this;
       lockBoard = true;
   
-      // Increment attempts
       playerData.attempts++;
       document.getElementById("attempts").textContent = playerData.attempts;
       localStorage.setItem("playerData", JSON.stringify(playerData));
