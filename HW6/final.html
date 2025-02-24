@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Complete</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Game Complete!</h1>
+    <p id="finalMessage"></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const storedData = localStorage.getItem("playerData");
+      if (storedData) {
+        const playerData = JSON.parse(storedData);
+        document.getElementById("finalMessage").textContent = 
+          `Congratulations ${playerData.firstName} ${playerData.lastName}, Age: ${playerData.age}! 
+          You completed the game in ${playerData.attempts} attempts.`;
+      }
+    });
+
+    function restartGame() {
+      localStorage.removeItem("playerData");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
