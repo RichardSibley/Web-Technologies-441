@@ -13,7 +13,12 @@ body {
     align-items: center;
     position: relative;
     font-family: 'MyCustomFont', sans-serif;
-    color: #fff;
+    color: #ffffff;
+    background-image: url('./Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .image-container {
