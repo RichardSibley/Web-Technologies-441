@@ -1,0 +1,21 @@
+[
+    {
+      "title": "The Iron Tower Trilogy",
+      "author": "Dennis L. McKiernan",
+      "year": 1984,
+      "image": "Images/Iron.jpg"
+    },
+    {
+      "title": "Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "year": 2007,
+      "image": "Images/Wind.png"
+    },
+    {
+      "title": "The Wheel of Time",
+      "author": "Rober Jordan",
+      "year": 1990,
+      "image": "Images/Wheel.png"
+    }
+  ]
+  
