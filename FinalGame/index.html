@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Phaser Platformer with Start Screen</title>
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
   <style>
     body { margin: 0; }
     canvas { display: block; margin: 0 auto; }
 
-    /* Add custom font */
     @font-face {
       font-family: 'MyCustomFont';
       src: url('Assets/Fonts/rocko.ttf') format('truetype');
@@ -26,27 +25,48 @@ class StartScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('sky', 'Assets/cavern.png');
+    this.load.image('start', 'Assets/StartScreen.png');
   }
 
   create() {
-    this.add.image(400, 300, 'sky').setDisplaySize(800, 600);
+    this.add.image(400, 300, 'start').setDisplaySize(800, 600);
 
-    const startText = this.add.text(400, 250, 'Press SPACE to Start', {
+    const startText = this.add.text(400, 340, 'Press SPACE to Start', {
       fontSize: '32px',
-      fill: '#ffffff',
+      fill: 'black',
       fontFamily: 'MyCustomFont'
     }).setOrigin(0.5);
 
-    const instructionsText = this.add.text(400, 350, 'Arrow keys for left and right, spacebar to jump!', {
+    const instructionsText = this.add.text(400, 370, 'Arrow keys for left and right, spacebar to jump!', {
       fontSize: '20px',
-      fill: '#ffffff',
+      fill: 'black',
+      fontFamily: 'MyCustomFont'
+    }).setOrigin(0.5);
+
+    const instructionsText2 = this.add.text(400, 400, 'Collect as many mushrooms as you can!', {
+      fontSize: '20px',
+      fill: 'black',
+      fontFamily: 'MyCustomFont'
+    }).setOrigin(0.5);
+
+    const instructionsText3 = this.add.text(400, 430, 'Watch for spikes and falling rocks!', {
+      fontSize: '20px',
+      fill: 'black',
       fontFamily: 'MyCustomFont'
     }).setOrigin(0.5);
 
     this.tweens.add({
       targets: startText,
-      scale: { from: 1, to: 1.2 },
+      scale: { from: 1, to: 1.5 },
+      duration: 8000,
+      yoyo: true,
+      repeat: -1,
+      ease: 'Sine.easeInOut'
+    });
+
+    this.tweens.add({
+      targets: startText,
+      alpha: {from: 1, to: 0 },
       duration: 600,
       yoyo: true,
       repeat: -1,
@@ -74,7 +94,7 @@ class MainScene extends Phaser.Scene {
     this.load.image('star', 'Assets/shroom.png');
     this.load.image('bomb', 'Assets/lavarock.png');
     this.load.image('spike', 'Assets/spike.png');
-    this.load.spritesheet('dude', 'Assets/mossflower.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('dude', 'Assets/mossflower.png', { frameWidth: 48, frameHeight: 63 });
   }
 
   create() {
@@ -84,7 +104,7 @@ class MainScene extends Phaser.Scene {
     this.add.image(400, 300, 'sky').setDisplaySize(800, 600);
 
     platforms = this.physics.add.staticGroup();
-    platforms.create(200, 250, 'ground').setScale(0.5).refreshBody();
+    platforms.create(200, 250, 'ground').setScale(0.5).refreshBody(); 
     platforms.create(0, 400, 'ground').setScale(0.5).refreshBody();
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
     platforms.create(600, 400, 'ground').setScale(0.5).refreshBody();
@@ -136,12 +156,19 @@ class MainScene extends Phaser.Scene {
       fontFamily: 'MyCustomFont'
     });
 
-    this.gameOverText = this.add.text(400, 300, 'Reload the browser to try again', {
+    this.gameOverText = this.add.text(400, 300, 'Reload the browser and try to beat your score!', {
       fontSize: '32px',
-      fill: 'white',
+      fill: 'red',
       fontFamily: 'MyCustomFont'
     }).setOrigin(0.5);
     this.gameOverText.setAlpha(0);
+
+    this.gameOverTitle = this.add.text(400, 240, 'GAME OVER!', {
+    fontSize: '64px',  // Larger font
+    fill: 'red',       // Standout color
+    fontFamily: 'MyCustomFont'
+    }).setOrigin(0.5);
+    this.gameOverTitle.setAlpha(0);  // Start hidden
 
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(stars, platforms);
@@ -228,6 +255,8 @@ function hitBomb(player, bomb) {
   player.anims.play('turn');
   gameOver = true;
   this.gameOverText.setAlpha(1);
+  this.gameOverTitle.setAlpha(1);
+  
 }
 
 function hitSpike(player, spike) {
@@ -236,6 +265,7 @@ function hitSpike(player, spike) {
   player.anims.play('turn');
   gameOver = true;
   this.gameOverText.setAlpha(1);
+  this.gameOverTitle.setAlpha(1);
 }
 </script>
 </body>
